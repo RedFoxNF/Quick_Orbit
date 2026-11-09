@@ -1,0 +1,79 @@
+{
+  "hotkey": "Ctrl+Alt+Space",
+  "corner": "TopRight",
+  "edgeMargin": 44,
+  "overlayOpacity": 1,
+  "theme": "Dark",
+  "accentColor": "#64E3FF",
+  "glowIntensity": 0.9,
+  "parallaxDegrees": 4,
+  "iconShape": "RoundedSquare",
+  "orbits": [
+    {
+      "name": "Ближняя орбита",
+      "radius": 172,
+      "tilt": 36,
+      "speed": 4,
+      "iconSize": 52,
+      "items": [
+        {
+          "name": "Проводник",
+          "type": "file",
+          "target": "explorer.exe",
+          "icon": ""
+        },
+        {
+          "name": "Блокнот",
+          "type": "file",
+          "target": "notepad.exe",
+          "icon": ""
+        },
+        {
+          "name": "Калькулятор",
+          "type": "file",
+          "target": "calc.exe",
+          "icon": ""
+        },
+        {
+          "name": "Терминал",
+          "type": "file",
+          "target": "cmd.exe",
+          "icon": ""
+        }
+      ]
+    },
+    {
+      "name": "Дальняя орбита",
+      "radius": 282,
+      "tilt": 30,
+      "speed": -2.6,
+      "iconSize": 52,
+      "items": [
+        {
+          "name": "GitHub",
+          "type": "url",
+          "target": "https://github.com",
+          "icon": ""
+        },
+        {
+          "name": "YouTube",
+          "type": "url",
+          "target": "https://www.youtube.com",
+          "icon": ""
+        },
+        {
+          "name": "Google",
+          "type": "url",
+          "target": "https://www.google.com",
+          "icon": ""
+        },
+        {
+          "name": "ChatGPT",
+          "type": "url",
+          "target": "https://chatgpt.com",
+          "icon": ""
+        }
+      ]
+    }
+  ]
+}

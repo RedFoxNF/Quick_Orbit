@@ -1,0 +1,50 @@
+<Window x:Class="QuickOrbit.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:QuickOrbit.Views"
+        Title="Quick Orbit"
+        Width="1280" Height="720"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ShowInTaskbar="False"
+        ShowActivated="True"
+        Topmost="True"
+        Focusable="True"
+        AllowDrop="True"
+        DragOver="Window_DragOver"
+        DragLeave="Window_DragLeave"
+        Drop="Window_Drop"
+        WindowStartupLocation="Manual"
+        UseLayoutRounding="True"
+        SnapsToDevicePixels="False">
+    <Grid x:Name="Root"
+          Background="Transparent"
+          Focusable="True"
+          MouseLeftButtonDown="Root_MouseLeftButtonDown"
+          PreviewKeyDown="Root_PreviewKeyDown">
+        <Grid x:Name="VisualHost" Background="{x:Null}">
+            <Grid.RenderTransform>
+                <ScaleTransform x:Name="ShowScale" ScaleX="1" ScaleY="1" />
+            </Grid.RenderTransform>
+            <local:OrbitSurface x:Name="Surface" />
+        </Grid>
+
+        <Border x:Name="DropHint"
+                Visibility="Collapsed"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Margin="0,18,0,0"
+                Padding="13,7"
+                CornerRadius="10"
+                Background="{StaticResource PanelBrush}"
+                BorderBrush="{StaticResource AccentBrush}"
+                BorderThickness="1"
+                IsHitTestVisible="False">
+            <TextBlock Text="Отпустите, чтобы добавить"
+                       FontSize="12"
+                       Foreground="{StaticResource TextBrush}" />
+        </Border>
+    </Grid>
+</Window>
